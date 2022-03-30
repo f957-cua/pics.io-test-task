@@ -1,19 +1,17 @@
 import { createReducer } from "@reduxjs/toolkit";
 import {
-  addToListSuccess,
-  addToListError,
   setCheckedConditions,
-  loadingRequest,
 } from "./loadedList-actions";
+import {asyncAddToList} from "./loadedList-operations"
 
 export const loadedListReducer = createReducer(
   [],
   {
-    [addToListSuccess]: (
+    [asyncAddToList.fulfilled]: (
       state,
       { payload }
     ) => [...state, ...payload],
-    [addToListError]: (
+    [asyncAddToList.rejected]: (
       _,
       { payload }
     ) => [payload],
@@ -40,8 +38,10 @@ export const loadedListReducer = createReducer(
 export const loadingReducer = createReducer(
   false,
   {
-    [loadingRequest]: () => true,
-    [addToListSuccess]: () => false,
-    [addToListError]: () => false,
+    [asyncAddToList.pending]: () =>
+      true,
+    [asyncAddToList.fulfilled]: () =>
+      false,
+    [asyncAddToList.rejected]: () => false,
   }
 );

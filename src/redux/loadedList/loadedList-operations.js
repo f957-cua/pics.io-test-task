@@ -1,17 +1,10 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import {
-  addToListSuccess,
-  addToListError,
-  loadingRequest,
-} from "redux/loadedList/loadedList-actions";
 
 const BASE_URL = "https://pixabay.com/api"; 
 const API_KEY = "21268272-c5791a68db62a23d91af73a0c";
 
-export const asyncAddToList = page => async (dispatch) => {
-  // pending => start loader
-  dispatch(loadingRequest());
-
+export const asyncAddToList = createAsyncThunk('keywordsList/Add', async (page, {rejectWithValue}) => {
   try {
     // request to API
     const fetchedImageArr =
@@ -31,11 +24,7 @@ export const asyncAddToList = page => async (dispatch) => {
         })
     );
 
-    // dispatch action with the new list
-    return dispatch(
-      addToListSuccess(newList)
-    );
-  } catch (error) {
-    dispatch(addToListError(error));
-  }
-};
+    // send payload to the new list
+    return newList;
+  } catch (error) { return rejectWithValue(error) }
+})

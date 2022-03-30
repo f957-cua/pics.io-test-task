@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-import { favoriteListReducer } from "redux/favorite/favorite-reducer";
+import { favoriteListReducer } from "./favorite/favorite-reducer";
 import {
   loadedListReducer,
   loadingReducer,
-} from "redux/loadedList/loadedList-reducer";
+} from "./loadedList/loadedList-reducer";
 
 const store = configureStore({
   reducer: {

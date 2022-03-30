@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import {getFavoriteList} from "../redux/store-selectors";
+import {getFavoriteList} from "redux/store-selectors";
 
-import { Card } from "components/Card";
+import { Card } from "./Card";
 
 export const FavoriteList = () => {
   const favoriteList = useSelector(getFavoriteList);

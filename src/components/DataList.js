@@ -9,8 +9,8 @@ import {
 import { asyncAddToList } from "redux/loadedList/loadedList-operations";
 import {getDownloadedList, getLoadingCondition} from "redux/store-selectors"
 
-import { Card } from "components/Card";
-import { Loader } from "components/Loader";
+import { Card } from "./Card";
+import { Loader } from "./Loader";
 
 export const DataList = () => {
 
