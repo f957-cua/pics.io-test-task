@@ -4,8 +4,6 @@ import {
   addToListError,
   setCheckedConditions,
   loadingRequest,
-  loadingSuccess,
-  loadingError,
 } from "./loadedList-actions";
 
 export const loadedListReducer = createReducer(
@@ -43,7 +41,7 @@ export const loadingReducer = createReducer(
   false,
   {
     [loadingRequest]: () => true,
-    [loadingSuccess]: () => false,
-    [loadingError]: () => false,
+    [addToListSuccess]: () => false,
+    [addToListError]: () => false,
   }
 );

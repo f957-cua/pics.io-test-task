@@ -1,5 +1,10 @@
 import { createAction } from "@reduxjs/toolkit";
 
+// pending => start fetch
+export const loadingRequest = createAction(
+  "loading/Request"
+);
+
 // fulfilled
 export const addToListSuccess = createAction(
   "list/AddSuccess"
@@ -9,10 +14,6 @@ export const addToListError = createAction(
   "list/AddError"
 );
 
-// pending => start fetch
-export const loadingRequest = createAction(
-  "loading/Request"
-);
 
 // stop fetching
 export const loadingSuccess = createAction(
