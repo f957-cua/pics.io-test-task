@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { getFavoriteList } from "../redux/store-selectors";
+import { getFavoriteList } from "redux/store-selectors";
 
-import ImageView from "../views/ImageView";
+import ImageView from "views/ImageView";
 
 export const ImageList = () => {
   

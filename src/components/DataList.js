@@ -6,11 +6,11 @@ import {
   useDispatch,
 } from "react-redux";
 
-import { asyncAddToList } from "../redux/loadedList/loadedList-operations";
-import {getDownloadedList, getLoadingCondition} from "../redux/store-selectors"
+import { asyncAddToList } from "redux/loadedList/loadedList-operations";
+import {getDownloadedList, getLoadingCondition} from "redux/store-selectors"
 
-import { Card } from "./Card";
-import { Loader } from "./Loader";
+import { Card } from "components/Card";
+import { Loader } from "components/Loader";
 
 export const DataList = () => {
 

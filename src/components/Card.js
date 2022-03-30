@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
-import {addToFavorite, removeFromFavorite} from "../redux/favorite/favorite-actions";
-import {setCheckedConditions} from "../redux/loadedList/loadedList-actions"
+import {addToFavorite, removeFromFavorite} from "redux/favorite/favorite-actions";
+import {setCheckedConditions} from "redux/loadedList/loadedList-actions"
 
-import CardView from "../views/CardView";
+import CardView from "views/CardView";
 
 export const Card = ({
   url,

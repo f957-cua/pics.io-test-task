@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import {addToFavorite, removeFromFavorite} from "./favorite-actions"
+import {addToFavorite, removeFromFavorite} from "redux/favorite/favorite-actions"
 
 export const favoriteListReducer =
   createReducer([], {

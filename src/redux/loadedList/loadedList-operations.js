@@ -3,9 +3,7 @@ import {
   addToListSuccess,
   addToListError,
   loadingRequest,
-  loadingSuccess,
-  loadingError,
-} from "./loadedList-actions";
+} from "redux/loadedList/loadedList-actions";
 
 const BASE_URL = "https://pixabay.com/api"; 
 const API_KEY = "21268272-c5791a68db62a23d91af73a0c";

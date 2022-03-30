@@ -1,6 +1,6 @@
-import { DataList } from "../components/DataList";
-import { FavoriteList } from "../components/FavoriteList";
-import { ImageList } from "../components/ImageList";
+import { DataList } from "components/DataList";
+import { FavoriteList } from "components/FavoriteList";
+import { ImageList } from "components/ImageList";
 
 export const Home = () => {
 
