@@ -8,22 +8,27 @@ export const FavoriteList = () => {
 
   return (
     <>
-      {
-      favoriteList.length === 0
-        ? null
-        : favoriteList.map(
-            ({previewURL, checked}, index) => (
+      {favoriteList.length ===
+      0 ? null : (
+        <>
+          <p className="h1 card m-1 bg-primary">
+            Favorite list
+          </p>
+          {favoriteList.map(
+            (
+              { previewURL, checked },
+              index
+            ) => (
               <div key={index}>
                 <Card
                   url={previewURL}
-                  checked={
-                    checked
-                  }
+                  checked={checked}
                 />
               </div>
             )
-          )
-      }
+          )}
+        </>
+      )}
     </>
   );
 };

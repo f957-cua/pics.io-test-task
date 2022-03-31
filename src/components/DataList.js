@@ -58,8 +58,12 @@ export const DataList = () => {
       {loading ? <Loader /> : null}
       {list.length === 0
         ? null
-        : list.map(
-            ({ previewURL , checked}, index) => (
+        : <>
+          <p className="h1 card m-1 bg-success">
+            Keywords
+          </p>
+          {list.map(
+            ({ previewURL, checked }, index) => (
               <div key={index}>
                 <Card
                   url={previewURL}
@@ -68,6 +72,7 @@ export const DataList = () => {
               </div>
             )
           )}
+        </>}
     </>
   );
 };
