@@ -6,33 +6,32 @@ import CardView from "views/CardView";
 
 export const Card = ({
   url,
+  name,
   checked
 }) => {
   const dispatch = useDispatch()
 
   const handleCheckbox = ({target}) => {
-    const { checked } = target;
-
-    const previewURL =
-      target.parentNode.parentNode
-        .parentNode.firstChild
-        .textContent;
+    const { checked } = target
 
     dispatch(
       checked
         ? addToFavorite({
-            previewURL,
+            userImageURL: url,
+            name,
             checked,
           })
         : removeFromFavorite({
-            previewURL,
+            userImageURL: url,
+            name,
             checked,
           })
     );
 
     dispatch(
       setCheckedConditions({
-        previewURL,
+        userImageURL: url,
+        name,
         checked: !checked,
       })
     );
@@ -41,6 +40,7 @@ export const Card = ({
   return (
     <CardView
       url={url}
+      name={name}
       checked={checked}
       onChecked={handleCheckbox}
     />

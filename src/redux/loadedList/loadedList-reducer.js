@@ -21,8 +21,8 @@ export const loadedListReducer = createReducer(
     ) => [
       ...state.map((item) => {
         if (
-          item.previewURL ===
-          payload.previewURL
+          item.userImageURL ===
+          payload.userImageURL
         ) {
           return {
             ...item,

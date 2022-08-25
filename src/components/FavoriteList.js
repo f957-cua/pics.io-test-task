@@ -11,17 +11,28 @@ export const FavoriteList = () => {
       {favoriteList.length ===
       0 ? null : (
         <>
-          <p className="h1 card m-1 bg-primary">
+          <p
+            className="card"
+            style={{
+              backgroundColor: "#111",
+              color: "#fc0"
+            }}
+          >
             Favorite list
           </p>
           {favoriteList.map(
             (
-              { previewURL, checked },
+              {
+                userImageURL,
+                name,
+                checked,
+              },
               index
             ) => (
               <div key={index}>
                 <Card
-                  url={previewURL}
+                  url={userImageURL}
+                  name={name}
                   checked={checked}
                 />
               </div>

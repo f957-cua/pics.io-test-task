@@ -12,9 +12,9 @@ export const favoriteListReducer =
       { payload }
     ) => [
       ...state.filter(
-        ({ previewURL }) =>
-          previewURL !==
-          payload.previewURL
+        ({ userImageURL }) =>
+          userImageURL !==
+          payload.userImageURL
       ),
     ],
   });

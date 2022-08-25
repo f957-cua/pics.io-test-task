@@ -56,23 +56,38 @@ export const DataList = () => {
   return (
     <>
       {loading ? <Loader /> : null}
-      {list.length === 0
-        ? null
-        : <>
-          <p className="h1 card m-1 bg-success">
+      {list.length === 0 ? null : (
+        <>
+          <p
+            className="card"
+            style={{
+              backgroundColor: "#111",
+              color: "#fc0",
+              position: "sticky"
+            }}
+          >
             Keywords
           </p>
           {list.map(
-            ({ previewURL, checked }, index) => (
+            (
+              {
+                userImageURL,
+                name,
+                checked,
+              },
+              index
+            ) => (
               <div key={index}>
                 <Card
-                  url={previewURL}
+                  url={userImageURL}
+                  name={name}
                   checked={checked}
                 />
               </div>
             )
           )}
-        </>}
+        </>
+      )}
     </>
   );
 };

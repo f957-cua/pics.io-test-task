@@ -14,15 +14,12 @@ export const ImageList = () => {
           ? null
           : favoriteList.map(
               (
-                { previewURL, tags },
-                index
+                { userImageURL }, index
               ) => (
-                <div key={index}>
                   <ImageView
-                    url={previewURL}
-                    tags={tags}
+                url={userImageURL}
+                key={index}
                   />
-                </div>
               )
             )
         // )

@@ -1,28 +1,26 @@
 import shortid from "shortid";
 
-export default function CardView({ url, checked, onChecked }) {
+export default function CardView({ name, checked, onChecked }) {
   const id = shortid.generate();
 
   return (
-    <div className="card m-1 bg-info">
-      <div className="d-flex flex-row p-1">
-        <p className="col card-title w-75">
-          {url}
+    <div
+      className="card my-1"
+      style={{
+        backgroundColor: "#111",
+      }}
+    >
+      <div className="d-flex flex-row p-0.5">
+        <p className="col w-50">
+          {name}
         </p>
         <div className="col-lg-3 form-check form-switch">
-          <label
-            className="form-check-label"
+          <input
+            type="checkbox"
             id={id}
-          >
-            favorite
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id={id}
-              checked={checked}
-              onChange={onChecked}
-            />
-          </label>
+            checked={checked}
+            onChange={onChecked}
+          />
         </div>
       </div>
     </div>

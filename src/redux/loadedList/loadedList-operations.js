@@ -17,11 +17,19 @@ export const asyncAddToList = createAsyncThunk('keywordsList/Add', async (page, 
 
     // filling keyword list
     fetchedImageArr.data.hits.forEach(
-      ({ previewURL }) =>
+      ({ previewURL }) => {
+        const name = previewURL
+          .split("")
+          .slice(47)
+          .join("")
+          .split("-")[0];
+
         newList.push({
-          previewURL,
+          userImageURL: previewURL,
+          name,
           checked: false,
         })
+      }
     );
 
     // send payload to the new list

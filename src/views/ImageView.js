@@ -1,16 +1,18 @@
-import shortid from "shortid";
-
 export default function ImageView({
-  url
+  url, index
 }) {
   return (
     <div
-      className="card"
-      id={shortid.generate()}
+      className="card m-1"
+      key={index}
+      style={{
+        height: "70px",
+        width: "130px"
+      }}
     >
       <img
         src={url}
-        className="card-img-top"
+        className="w-100 h-100 card-img-top"
         alt={url}
       />
     </div>
