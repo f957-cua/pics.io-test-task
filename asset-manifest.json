@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pics.io-test-task/static/css/main.2f411ba1.css",
+    "main.js": "/pics.io-test-task/static/js/main.b1444c7b.js",
+    "index.html": "/pics.io-test-task/index.html",
+    "main.2f411ba1.css.map": "/pics.io-test-task/static/css/main.2f411ba1.css.map",
+    "main.b1444c7b.js.map": "/pics.io-test-task/static/js/main.b1444c7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f411ba1.css",
+    "static/js/main.b1444c7b.js"
+  ]
+}
