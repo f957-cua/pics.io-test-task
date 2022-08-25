@@ -9,7 +9,7 @@ export const asyncAddToList = createAsyncThunk('keywordsList/Add', async (page, 
     // request to API
     const fetchedImageArr =
       await axios.get(
-        `${BASE_URL}/?key=${API_KEY}&q=foto&image_type=photo&orientation=horizontal&page=${page}&per_page=20`
+        `${BASE_URL}/?key=${API_KEY}&q=foto&image_type=photo&orientation=horizontal&page=${page}&per_page=25`
       );
 
     // creation keyword list
